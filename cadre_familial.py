@@ -127,8 +127,15 @@ def process_message(num, msg) :
             from_h = unicode(decode[0],decode[1])
     else:
             from_h = unicode(decode[0])
+    decode = email.header.decode_header(msg['Message-ID'])[0]
+    message_id = unicode("")
+    if decode[1]:
+            message_id = unicode(decode[0],decode[1])
+    else:
+            message_id = unicode(decode[0])
+             
     if args.verbose >= 1:
-        print 'Message %s: %s  from %s' % (num, subject, from_h)
+        print 'Message %s (%s): %s  from %s' % (num, message_id, subject, from_h)
     # Now convert to local date-time
     date_tuple = email.utils.parsedate_tz(msg['Date'])
     if date_tuple:
