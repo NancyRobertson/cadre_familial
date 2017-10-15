@@ -4,3 +4,8 @@ services:
     build: .
     env_file:
       - account-info.env 
+    links:
+      - redis
+  redis:
+    image: redis:alpine
+
