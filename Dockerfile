@@ -11,6 +11,7 @@ RUN apt-get install tzdata
 RUN apt-get install python -y
 RUN apt-get install python-pip -y
 RUN pip install dropbox
+RUN pip install redis
 
 # Workaround for pam security issue
 # Ref: https://stackoverflow.com/questions/43323754/cannot-make-remove-an-entry-for-the-specified-session-cron
