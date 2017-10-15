@@ -115,25 +115,38 @@ def process_part(part) :
 
 
 def process_message(num, msg) :
+    # extract header Subject field
     decode = email.header.decode_header(msg['Subject'])[0]
     subject = unicode("")
     if decode[1]:
             subject = unicode(decode[0],decode[1])
     else:
             subject = unicode(decode[0])
+            
+    # extract header From field
     decode = email.header.decode_header(msg['From'])[0]
     from_h = unicode("")
     if decode[1]:
             from_h = unicode(decode[0],decode[1])
     else:
             from_h = unicode(decode[0])
+            
+    # extract header Message-ID field
     decode = email.header.decode_header(msg['Message-ID'])[0]
     message_id = unicode("")
     if decode[1]:
             message_id = unicode(decode[0],decode[1])
     else:
             message_id = unicode(decode[0])
-             
+            
+    # extract header To field
+    decode = email.header.decode_header(msg['To'])[0]
+    header_to = unicode("")
+    if decode[1]:
+            header_to = unicode(decode[0],decode[1])
+    else:
+            header_to = unicode(decode[0])
+            
     if args.verbose >= 1:
         print 'Message %s (%s): %s  from %s' % (num, message_id, subject, from_h)
     # Now convert to local date-time
