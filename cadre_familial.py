@@ -26,6 +26,7 @@ import os
 import dropbox
 import argparse
 import shutil
+import redis
 
 # Get your app key and secret from the Dropbox developer website
 app_key = os.environ['CRON_DROP_KEY']
@@ -58,6 +59,8 @@ parser.add_argument('--cleanup_local_folder','-c', action='store_true',
     help='delete the local folder and attachments on termination.')
 parser.add_argument('--local_only', '-o', action='store_true',
     help='do not upload the pictures to dropbox')
+parser.add_argument('--no_metadata', '-M', action='store_true',
+    help='do not store metadata in redis')
 parser.add_argument('--verbose', '-v', action='count',
     help='increase verbosity')
 parser.add_argument('--email_max', '-x', type=int,
@@ -156,6 +159,10 @@ def process_message(num, msg) :
             email.utils.mktime_tz(date_tuple))
         if args.verbose >= 1:
             print "Local Date:", local_date.strftime("%a, %d %b %Y %H:%M:%S")
+    if not args.no_metadata:
+        r = redis.StrictRedis("redis")
+        r.hmset( "message:"+message_id, {'From':from_h, 'Subject':subject, 'Date': local_date.strftime("%a, %d %b %Y %H:%M:%S"), 'To': header_to})
+    
     if msg.get_content_maintype() != 'multipart':
             return
     count_parts = 0;
