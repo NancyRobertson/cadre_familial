@@ -83,7 +83,7 @@ def exists(path):
         return False
 
 
-def process_part(part, , redis_connection, message_id) :
+def process_part(part, redis_connection, message_id) :
     if part.get_content_maintype() == 'multipart':
         return False
     if part.get('Content-Disposition') is None:
