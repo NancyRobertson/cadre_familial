@@ -83,7 +83,7 @@ def exists(path):
         return False
 
 
-def process_part(part) :
+def process_part(part, , redis_connection, message_id) :
     if part.get_content_maintype() == 'multipart':
         return False
     if part.get('Content-Disposition') is None:
@@ -103,6 +103,8 @@ def process_part(part) :
         fp.write(part.get_payload(decode=True))
         fp.close()
 
+    if not args.no_metadata:
+        redis_connection.sadd( "message_attach:"+message_id, filename)
     if not args.local_only:
         if not exists(os.path.join(args.dbx_folder,filename)) :
             if args.verbose >= 1:
@@ -160,14 +162,14 @@ def process_message(num, msg) :
         if args.verbose >= 1:
             print "Local Date:", local_date.strftime("%a, %d %b %Y %H:%M:%S")
     if not args.no_metadata:
-        r = redis.StrictRedis("redis")
-        r.hmset( "message:"+message_id, {'From':from_h, 'Subject':subject, 'Date': local_date.strftime("%a, %d %b %Y %H:%M:%S"), 'To': header_to})
+        redis_connection = redis.StrictRedis("redis")
+        redis_connection.hmset( "message:"+message_id, {'From':from_h, 'Subject':subject, 'Date': local_date.strftime("%a, %d %b %Y %H:%M:%S"), 'To': header_to})
     
     if msg.get_content_maintype() != 'multipart':
             return
     count_parts = 0;
     for part in msg.walk():
-        if process_part(part):
+        if process_part(part, redis_connection, message_id):
             count_parts += 1
     if args.verbose >= 1:
         print 'Has %d attachments' % (count_parts)
