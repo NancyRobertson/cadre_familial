@@ -104,7 +104,7 @@ def process_part(part, redis_connection, message_id) :
         fp.close()
 
     if not args.no_metadata:
-        redis_connection.sadd( "message_attach:"+message_id, filename)
+        redis_connection.sadd( "message:"+message_id+"attach", filename)
     if not args.local_only:
         if not exists(os.path.join(args.dbx_folder,filename)) :
             if args.verbose >= 1:
