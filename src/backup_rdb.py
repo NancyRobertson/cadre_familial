@@ -15,11 +15,19 @@ import redis
 
 ###
 # Check the existence of a file in dropbox
-def exists(path):
+def exists(dbx, path):
     try:
         dbx.files_get_metadata(path)
+    	if args.verbose >= 2:
+       	    print 'dropbox path: %s exists' % (path)
         return True
-    except:
+    except Exception as e:
+    	if args.verbose >= 2:
+       	    print 'dropbox path: %s does not exist' % (path)
+            if hasattr(e, 'message'):
+                print(e.message)
+            else:
+                print(e)
         return False
 
 ###
@@ -47,11 +55,11 @@ def save_and_upload() :
         dbx = dropbox.Dropbox(args.dbx_token)
         
         # ensure dropbox folder exists
-        if not exists (args.dbx_folder):
+        if not exists (dbx, args.dbx_folder):
             dbx.files_create_folder(args.dbx_folder)
             
         f = open(os.path.join(args.local_folder, filename), 'rb')
-        response = dbx.files_upload(f.read(),os.path.join(args.dbx_folder,filename))
+        response = dbx.files_upload(f.read(),os.path.join(args.dbx_folder,filename), mode=dropbox.files.WriteMode.overwrite)
         if args.verbose >= 1:
             print "uploaded: ", response
         else :
