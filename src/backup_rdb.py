@@ -14,6 +14,15 @@ import shutil
 import redis
 
 ###
+# Check the existence of a file in dropbox
+def exists(path):
+    try:
+        dbx.files_get_metadata(path)
+        return True
+    except:
+        return False
+
+###
 # Trigger redis to export its datastore
 # And upload it to the dropbox account
 def save_and_upload() :
@@ -36,6 +45,11 @@ def save_and_upload() :
             print 'uploading: ', filename
     if not args.local_only:
         dbx = dropbox.Dropbox(args.dbx_token)
+        
+        # ensure dropbox folder exists
+        if not exists (args.dbx_folder)
+            dbx.file_create_folder(args.dbx_folder)
+            
         f = open(os.path.join(args.local_folder, filename), 'rb')
         response = dbx.files_upload(f.read(),os.path.join(args.dbx_folder,filename))
         if args.verbose >= 1:
