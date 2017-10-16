@@ -47,7 +47,7 @@ def save_and_upload() :
         dbx = dropbox.Dropbox(args.dbx_token)
         
         # ensure dropbox folder exists
-        if not exists (args.dbx_folder)
+        if not exists (args.dbx_folder):
             dbx.file_create_folder(args.dbx_folder)
             
         f = open(os.path.join(args.local_folder, filename), 'rb')
