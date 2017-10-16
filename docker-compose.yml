@@ -6,6 +6,9 @@ services:
       - account-info.env 
     links:
       - redis
+    volumes:
+      - /usr/share/zoneinfo:/usr/share/zoneinfo
+      - /etc/localtime:/etc/localtime
     volumes_from:
       - redis
     restart: always
@@ -13,6 +16,8 @@ services:
     image: redis:alpine
     volumes:
       - redis_data:/data
+      - /usr/share/zoneinfo:/usr/share/zoneinfo
+      - /etc/localtime:/etc/localtime
     restart: always
 volumes:  
   redis_data:
