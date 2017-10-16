@@ -17,9 +17,10 @@ RUN pip install redis
 # Ref: https://stackoverflow.com/questions/43323754/cannot-make-remove-an-entry-for-the-specified-session-cron
 RUN sed -i '/session    required     pam_loginuid.so/c\#session    required   pam_loginuid.so' /etc/pam.d/cron
 
-# Add crontab file in the cron directory
+# Add python scripts
 ADD cadre_familial.py /usr/local/bin/cadre_familial.py
-RUN chmod a+x /usr/local/bin/cadre_familial.py
+ADD src/backup_rdb.py /usr/local/bin/backup_rdb.py
+RUN chmod a+x /usr/local/bin/*.py
 
 # Set the timezone
 RUN ln -sf /usr/share/zoneinfo/America/Montreal /etc/localtime
