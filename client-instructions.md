@@ -1,6 +1,9 @@
-The best box I found for this application so far is the SCISHION V88 Pro.
+The best box I found for this application so far is the [SCISHION V88 Pro](https://www.banggood.com/SCISHION-V88-Pro-Amlogic-S905X-1G-RAM-8G-ROM-TV-Box-p-1114881.html).
+
 It is a small device with HDMI output that you can connect to any modern TV.
+
 It runs on Android 6.0. 
+
 The important feature that some other TV boxes do not have is the ability to automatically start DayDreaming when there is no activity.
 
 (the V88 Pro comes with Android 6.0.1 and the security patch level is August 1, 2016 at time of writing)
