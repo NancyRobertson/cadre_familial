@@ -15,17 +15,17 @@ The important feature that some other TV boxes do not have is the ability to aut
 
 - My Apps/Folder Sync Lite/ Allow /
 - File Manager + slideshow
-- Accounts + Dropbox : slideshow dropbox <tab> <tab> <Authenticate Account>
-- < yourframe >@gmail.com <tab> password <Sign In> <Allow> <SAVE - bottom right button to save> (account shows up in left pane)
-- Folder Pairs + Slideshow Dropbox <tab> Account: slideshow dropbox Sync type: To local folder 
-- Remote folder: slideshow <Bottom right + button>
-- Local folder: slideshow  <Bottom right + button>
+- Accounts + Dropbox : slideshow dropbox < tab > < tab > < Authenticate Account >
+- < yourframe >@gmail.com < tab> password <Sign In > < Allow > < SAVE - bottom right button to save > (account shows up in left pane)
+- Folder Pairs + Slideshow Dropbox < tab > Account: slideshow dropbox Sync type: To local folder 
+- Remote folder: slideshow < Bottom right + button >
+- Local folder: slideshow  < Bottom right + button >
 - Scheduling: every 15 minutes
 - Connection Use WiFi: ON
-- <SAVE: bottom far right button> (to the right of filters - folder pair show up in left pane)
+- < SAVE: bottom far right button > (to the right of filters - folder pair show up in left pane)
 - Settings/ Date & Time/ Automatic : off
-- Time: set Time Zone: New York <esc> automatic : On <esc> <esc>
-- My Apps/Day Frame<Get Started>
+- Time: set Time Zone: New York < esc > automatic : On < esc > < esc >
+- My Apps/Day Frame< Get Started >
 - < Skip this step >
 - < Skip this Step >
 - < Open the gallery >
@@ -36,8 +36,8 @@ The important feature that some other TV boxes do not have is the ability to aut
 - ckick check mark at to right
 - Play Lists in main menu
 - using vertical dots remove Interesting and Dayframe
-- Can now hit Play at top right to check <esc>
-- <esc><esc><esc>
+- Can now hit Play at top right to check < esc >
+- < esc > < esc > < esc >
 - Settings/Display/Daydream
 - Daydream: Dayframe
 - When to daydream: 5 minutes
