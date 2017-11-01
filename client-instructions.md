@@ -10,7 +10,6 @@ The important feature that some other TV boxes do not have is the ability to aut
 - My Apps/Play Store as < yourframe >@gmail.com (A gmail account that you have created for a group of devices)
 - no backup, no billing, Get Started
 - Install Foldder Sync (version 2.9.12 at time of writing)
-- Settings/Apps/System Apps/Google Play Store/Uninstall Updates - Replace with factory version - OK
 - My Apps/Google Play Store/ 
 - Install DayFrame (Photos & Slideshow) (version 31. at time of writing)
 
