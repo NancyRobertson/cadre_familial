@@ -6,7 +6,7 @@ The important feature that some other TV boxes do not have is the ability to aut
 
 - Settings/Network/WIFI - Choose correct and enter password
 - Esc Esc
-- My Apps/Play Store as <yourframe>@gmail.com (A gmail account that you have created for a group of devices)
+- My Apps/Play Store as < yourframe >@gmail.com (A gmail account that you have created for a group of devices)
 - no backup, no billing, Get Started
 - Install Foldder Sync Lite
 - Settings/Apps/System Apps/Google Play Store/Uninstall Updates - Replace with factory version - OK
@@ -16,7 +16,7 @@ The important feature that some other TV boxes do not have is the ability to aut
 - My Apps/Folder Sync Lite/ Allow /
 - File Manager + slideshow
 - Accounts + Dropbox : slideshow dropbox <tab> <tab> <Authenticate Account>
-- <yourframe>@gmail.com <tab> password <Sign In> <Allow> <SAVE - bottom right button to save> (account shows up in left pane)
+- < yourframe >@gmail.com <tab> password <Sign In> <Allow> <SAVE - bottom right button to save> (account shows up in left pane)
 - Folder Pairs + Slideshow Dropbox <tab> Account: slideshow dropbox Sync type: To local folder 
 - Remote folder: slideshow <Bottom right + button>
 - Local folder: slideshow  <Bottom right + button>
@@ -26,11 +26,11 @@ The important feature that some other TV boxes do not have is the ability to aut
 - Settings/ Date & Time/ Automatic : off
 - Time: set Time Zone: New York <esc> automatic : On <esc> <esc>
 - My Apps/Day Frame<Get Started>
-- <Skip this step>
-- <Skip this Step>
-- <Open the gallery>
-- <Got It>
-- <Got it>
+- < Skip this step >
+- < Skip this Step >
+- < Open the gallery >
+- < Got It >
+- < Got it >
 - Swipe from left
 - Streams / Manage Photo Streams -> Folders : show in left menu
 - Streams / Folders  (back one level at the top) place check mark besides slideshow at far right
