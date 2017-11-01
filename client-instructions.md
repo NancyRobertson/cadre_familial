@@ -8,10 +8,10 @@ The important feature that some other TV boxes do not have is the ability to aut
 - Esc Esc
 - My Apps/Play Store as < yourframe >@gmail.com (A gmail account that you have created for a group of devices)
 - no backup, no billing, Get Started
-- Install Foldder Sync Lite
+- Install Foldder Sync (version 2.9.12 at time of writing)
 - Settings/Apps/System Apps/Google Play Store/Uninstall Updates - Replace with factory version - OK
 - My Apps/Google Play Store/ 
-- Install DayFrame (Photos & Slideshow)
+- Install DayFrame (Photos & Slideshow) (version 31. at time of writing)
 
 - My Apps/Folder Sync Lite/ Allow /
 - File Manager + slideshow
@@ -30,12 +30,11 @@ The important feature that some other TV boxes do not have is the ability to aut
 - < Skip this Step >
 - < Open the gallery >
 - < Got It >
-- < Got it >
 - Swipe from left
-- Streams / Manage Photo Streams -> Folders : show in left menu
-- Streams / Folders  (back one level at the top) place check mark besides slideshow at far right
+- Photostreams / Manage Photo Streams -> Folders : show in left menu
+- Photosreams / Folders  (back one level at the top) place check mark besides slideshow at far right
 - ckick check mark at to right
-- Play Lists in main men
+- Play Lists in main menu
 - using vertical dots remove Interesting and Dayframe
 - Can now hit Play at top right to check <esc>
 - <esc><esc><esc>
