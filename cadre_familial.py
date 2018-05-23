@@ -106,6 +106,7 @@ def process_part(part, redis_connection, message_id) :
     if not args.no_metadata:
         redis_connection.sadd( "message:"+message_id+":attach", filename)
     if not args.local_only:
+        dbx = dropbox.Dropbox(args.dbx_token)
         if not exists(os.path.join(args.dbx_folder,filename)) :
             if args.verbose >= 1:
                 print 'uploading: ', filename
@@ -232,8 +233,6 @@ rv, data = M.select(args.email_mailbox)
 if rv == 'OK':
     if args.verbose >= 1:
         print "Processing mailbox %s\n" % args.email_mailbox
-    if not args.local_only:
-        dbx = dropbox.Dropbox(args.dbx_token)
 
     process_mailbox(M)
     M.close()
