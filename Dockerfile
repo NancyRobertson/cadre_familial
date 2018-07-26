@@ -27,6 +27,7 @@ RUN chmod a+x /usr/local/bin/*.py
 RUN (crontab -l ; echo "* * * * * . /usr/local/etc/cadre_familial.env; echo "Hello \$CRON2_ACCOUNT"  > /proc/1/fd/1 2>/proc/1/fd/2") | crontab
 RUN (crontab -l ; echo "0,15,30,45 * * * * . /usr/local/etc/cadre_familial.env; date > /proc/1/fd/1 2>/proc/1/fd/2 ; /usr/local/bin/cadre_familial.py -v --local_folder e_tmp --cleanup_local_folder --email_account \${CRON1_ACCOUNT} --password \${CRON1_PASSWORD} --dbx_token \$CRON_DBX_TOKEN > /proc/1/fd/1 2>/proc/1/fd/2") | crontab
 RUN (crontab -l ; echo "* * * * * . /usr/local/etc/cadre_familial.env; date > /proc/1/fd/1 2>/proc/1/fd/2; /usr/local/bin/cadre_familial.py -v --local_folder c_tmp --cleanup_local_folder --email_account \$CRON2_ACCOUNT --password \$CRON2_PASSWORD --dbx_token \$CRON_DBX_TOKEN > /proc/1/fd/1 2>/proc/1/fd/2") | crontab
+RUN (crontab -l ; echo "*/5 * * * * . /usr/local/etc/cadre_familial.env; date > /proc/1/fd/1 2>/proc/1/fd/2; /usr/local/bin/cadre_familial.py -v --local_folder c_tmp --cleanup_local_folder --email_account \$CRON3_ACCOUNT --password \$CRON3_PASSWORD --dbx_token \$CRON_DBX_TOKEN3 > /proc/1/fd/1 2>/proc/1/fd/2") | crontab
 RUN (crontab -l ; echo "27,57 * * * * . /usr/local/etc/cadre_familial.env; date > /proc/1/fd/1 2>/proc/1/fd/2 ; /usr/local/bin/backup_rdb.py -v --dbx_token \$CRON_DBX_TOKEN > /proc/1/fd/1 2>/proc/1/fd/2") | crontab
 
 # Run the command on container startup
