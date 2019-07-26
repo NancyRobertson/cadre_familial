@@ -31,4 +31,4 @@ RUN (crontab -l ; echo "*/3 * * * * . /usr/local/etc/cadre_familial.env; date > 
 RUN (crontab -l ; echo "27,57 * * * * . /usr/local/etc/cadre_familial.env; date > /proc/1/fd/1 2>/proc/1/fd/2 ; /usr/local/bin/backup_rdb.py -v --dbx_token \$CRON_DBX_TOKEN > /proc/1/fd/1 2>/proc/1/fd/2") | crontab
 
 # Run the command on container startup
-CMD printenv | sed 's/^\(.*\)$/export \1/g'| grep -E "^export CRON">/usr/local/etc/cadre_familial.env; cron -f
+CMD printenv | sed 's/^\(.*\)$/export \1/g'| egrep -e "^export CRON" -e "^export PYTHON" >/usr/local/etc/cadre_familial.env; cron -f

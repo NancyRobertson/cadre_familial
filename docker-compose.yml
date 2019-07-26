@@ -2,6 +2,8 @@ version: '2'
 services:
   cron:
     build: .
+    environment:
+      - PYTHONIOENCODING=UTF-8
     env_file:
       - account-info.env 
     links:
