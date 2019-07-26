@@ -13,7 +13,7 @@ RUN pip install dropbox
 RUN pip install redis
 
 # will be using the timezone from the host via a volume to match redis:alpine behavior
-RUN rm /etc/localtime
+RUN rm -f /etc/localtime
 
 # Workaround for pam security issue
 # Ref: https://stackoverflow.com/questions/43323754/cannot-make-remove-an-entry-for-the-specified-session-cron
