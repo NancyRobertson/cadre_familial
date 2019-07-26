@@ -111,7 +111,7 @@ def process_part(part, redis_connection, message_id) :
             if args.verbose >= 1:
                 print 'uploading: ', filename
             f = open(os.path.join(args.local_folder, filename), 'rb')
-            response = dbx.files_upload(f.read(),os.path.join(args.dbx_folder,filename))
+            response = dbx.files_upload(f.read(),os.path.join(args.dbx_folder,filename),mode=dropbox.files.WriteMode.overwrite)
             if args.verbose >= 1:
                 print "uploaded: ", response
         else :
