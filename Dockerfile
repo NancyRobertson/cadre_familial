@@ -11,6 +11,7 @@ RUN apt-get install python -y
 RUN apt-get install python-pip -y
 RUN pip install dropbox
 RUN pip install redis
+RUN apt-get install inetutils-ping -y
 
 # will be using the timezone from the host via a volume to match redis:alpine behavior
 RUN rm -f /etc/localtime
