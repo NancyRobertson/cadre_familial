@@ -37,3 +37,9 @@ SyncState *
 ```
   * create mail folder
   * `mbsync gmail`
+
+* Extract attachments
+  * Ref: https://manpages.debian.org/testing/maildir-utils/mu-easy.1.en.html
+  * Ref: https://manpages.debian.org/testing/maildir-utils/mu-extract.1.en.html
+  * Ref: https://unix.stackexchange.com/questions/649525/how-to-view-an-email-message-file-located-in-a-maildir-from-the-command-line
+  * 
