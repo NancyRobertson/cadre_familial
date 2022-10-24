@@ -7,3 +7,33 @@
   * Browse to IP of frame
   * Choose Settings page from hamburger menu
   * In Other Settings, set Rotation to 0°
+* Change user pi's default password from `dynaframe` to something more secure
+* Reading gmail...
+  * Ref: http://frostyx.cz/posts/synchronize-your-2fa-gmail-with-mbsync
+  * `sudo apt-get install isync`
+  * create .mbsyncrc file
+```
+IMAPStore gmail-remote
+Host imap.gmail.com
+SSLType IMAPS
+AuthMechs LOGIN
+User n****n.estarling2@gmail.com
+Pass ****
+
+MaildirStore gmail-local
+Path ~/Mail/gmail/
+Inbox ~/Mail/gmail/INBOX
+Subfolders Verbatim
+
+
+Channel gmail
+Master :gmail-remote:
+Slave :gmail-local:
+Create Both
+Expunge Both
+Patterns * !"[Gmail]/All Mail" !"[Gmail]/Important" !"[Gmail]/Starred" !"[Gmail]/Bin"
+SyncState *
+
+```
+  * create mail folder
+  * `mbsync gmail`
