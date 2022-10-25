@@ -35,11 +35,17 @@ Patterns * !"[Gmail]/All Mail" !"[Gmail]/Important" !"[Gmail]/Starred" !"[Gmail]
 SyncState *
 
 ```
-  * create mail folder
+  * `mkdir -p ~/Mail/gmail/INBOX`
   * `mbsync gmail`
 
 * Extract attachments
   * Ref: https://manpages.debian.org/testing/maildir-utils/mu-easy.1.en.html
   * Ref: https://manpages.debian.org/testing/maildir-utils/mu-extract.1.en.html
   * Ref: https://unix.stackexchange.com/questions/649525/how-to-view-an-email-message-file-located-in-a-maildir-from-the-command-line
-  * 
+  * Install maildir-utils (whichever version is available as a package for raspbian it is 1.0)
+    * `sudo apt-get install maildir-utils`
+  * After reading mail, index it
+    * `mu index --maildir=~/Mail`
+  * extract attachments from all messages
+    * `mu find  flag:attach --skip-dups --fields="l" --exec='mu extract --save-attachments --target-dir=~/Pictures/Estarling --overwrite'`
+
