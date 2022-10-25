@@ -47,5 +47,6 @@ SyncState *
   * After reading mail, index it
     * `mu index --maildir=~/Mail`
   * extract attachments from all messages
+    * `mkdir -p ~/Pictures/Estarling`
     * `mu find  flag:attach --skip-dups --fields="l" --exec='mu extract --save-attachments --target-dir=~/Pictures/Estarling --overwrite'`
 
