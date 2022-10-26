@@ -50,3 +50,12 @@ SyncState *
     * `mkdir -p ~/Pictures/Estarling`
     * `mu find  flag:attach --skip-dups --fields="l" --exec='mu extract --save-attachments --target-dir=~/Pictures/Estarling --overwrite'`
 
+# DynaframePro Extra Doc
+## Included
+* Swap in September 2022 release
+  * https://pimylifeup.com/raspberry-pi-swap-file/
+
+## Install on existing PI
+Extract it based on distributed image...
+
+Copy the Dynaframe folder, copy it to your image, sudo bash deps.sh and then sudo chmod +x Dynaframe and you should be able to launch it on your custom image
