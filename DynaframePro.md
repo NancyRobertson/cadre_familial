@@ -64,4 +64,5 @@ Copy the Dynaframe folder, copy it to your image, sudo bash deps.sh and then sud
 * connect to SSID Dynaframe as on initial setup
 * ssh to 10.41.0.1
 * Execute command `comitup-cli` and follow prompts.
-In as shell
+Should come up with new IP, if not, reboot.
+
