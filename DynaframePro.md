@@ -66,3 +66,6 @@ Copy the Dynaframe folder, copy it to your image, sudo bash deps.sh and then sud
 * Execute command `comitup-cli` and follow prompts.
 Should come up with new IP, if not, reboot.
 
+# EXIF
+They use metadataextractor
+
