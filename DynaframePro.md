@@ -53,11 +53,11 @@ SyncState *
 ### Mounting samba shares
 in fstab:
 ```
-//10.1.1.15/Volume_1 /mnt/Polaris/Volume_1/ cifs  noauto,username=guest,password=REDACTED,vers=1.0
+//10.1.1.1x/Volume_1 /mnt/Polaris/Volume_1/ cifs  noauto,username=guest,password=REDACTED,vers=1.0
 ```
 From command line:
 ```
-sudo mount -v -t cifs -o username=guest,vers=1.0,password=REDACTED //10.1.1.15/Volume_1 /mnt/Polaris/Volume_1/
+sudo mount -v -t cifs -o username=guest,vers=1.0,password=REDACTED //10.1.1.1x/Volume_1 /mnt/Polaris/Volume_1/
 ```
 
 # DynaframePro Extra Doc
