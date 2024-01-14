@@ -50,6 +50,16 @@ SyncState *
     * `mkdir -p ~/Pictures/Estarling`
     * `mu find  flag:attach --skip-dups --fields="l" --exec='mu extract --save-attachments --target-dir=~/Pictures/Estarling --overwrite'`
 
+### Mounting samba shares
+in fstab:
+```
+//10.1.1.15/Volume_1 /mnt/Polaris/Volume_1/ cifs  noauto,username=guest,password=REDACTED,vers=1.0
+```
+From command line:
+```
+sudo mount -v -t cifs -o username=guest,vers=1.0,password=REDACTED //10.1.1.15/Volume_1 /mnt/Polaris/Volume_1/
+```
+
 # DynaframePro Extra Doc
 ## Included
 * Swap in September 2022 release
