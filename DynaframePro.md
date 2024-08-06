@@ -7,6 +7,8 @@
   * Browse to IP of frame
   * Choose Settings page from hamburger menu
   * In Other Settings, set Rotation to 0°
+  * With Samsung monitor, a bit is lost on left and right
+    * disabling overscan does not make a difference
 * Change user pi's default password from `dynaframe` to something more secure
 * Reading gmail...
   * Ref: http://frostyx.cz/posts/synchronize-your-2fa-gmail-with-mbsync
