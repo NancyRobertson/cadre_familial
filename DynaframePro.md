@@ -52,6 +52,11 @@ SyncState *
     * `mkdir -p ~/Pictures/Estarling`
     * `mu find  flag:attach --skip-dups --fields="l" --exec='mu extract --save-attachments --target-dir=~/Pictures/Estarling --overwrite'`
 
+### RClone 
+To maintain remote frames, Geektoolkit recommends rclone
+
+https://rclone.org/docs/
+
 ### Mounting samba shares
 in fstab:
 ```
